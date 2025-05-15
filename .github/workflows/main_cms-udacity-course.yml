@@ -29,7 +29,12 @@ jobs:
           python -m venv venv
           source venv/bin/activate
       
-      - name: Install dependencies
+      - name: Install System dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unixodbc-dev
+      
+      - name: Install Python dependencies
         run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
@@ -68,9 +73,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C61D08C14F8A4CBAB52D037213FD925B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_27AB04E196F04BEE8833E3054F5FFDC8 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4BEAF11D0325472DAB891F2E6C64E8A7 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3E1F82830BB94D41BD84DE6DE0A40498 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D8D415C275414EBFAD1E84BC0E24FC56 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_D28C19311DAB42549927D7FB2D03B4EA }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
