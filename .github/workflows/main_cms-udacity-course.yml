@@ -81,6 +81,6 @@ jobs:
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'cms-udacity-course-ffb3acfggtawgae2.brazilsouth-01.azurewebsites.net'
+          app-name: 'cms-udacity-course'
           slot-name: 'Production'
           
