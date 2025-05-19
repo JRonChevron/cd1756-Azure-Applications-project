@@ -5,7 +5,7 @@
 | Criteria | Azure Web App (App Service) | Azure Virtual Machine (VM)| 
 |----------|-----------------------------|---------------------------|
 |Monthly cost	| $0 (Free F1 Tier Plan)	| From ~$16/month (Basic / General Purpose Plan)	|
-|Scalability	| Virtual machine scale sets - Integrated	| Virtual machine scale sets - Manual |
+|Scalability	| Built-in service	| Virtual machine scale sets - Manual |
 |High availability	| Azure Traffic Manager and Azure Front Door	| Azure Traffic Manager, Azure Front Door, and cross-region Azure Load Balancer |
 |Deployment	| Integrated support for GitHub Actions, CLI, etc.	| CI/CD must be manually set up|
 |Maintenance	| Azure manages OS, runtime, patching	| Fully self-managed (OS, updates, security)|
